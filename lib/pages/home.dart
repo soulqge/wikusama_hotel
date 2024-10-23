@@ -23,9 +23,7 @@ class HomePage extends StatelessWidget {
                   HomeImage(),
                   SizedBox(height: 20),
                   HomeContent(
-                      title: "Fasilitas",
-                      buttonText: "See More",
-                      onButtonPressed: () {},
+                      title: "Fasilities",
                       imageUrls: [
                         'https://c.ekstatic.net/ecl/sponsorships/sport-football/real-madrid-w300x300.jpg',
                         'https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2024/08/15/mbappe-trofijpg-20240815044747.jpg',
@@ -33,9 +31,7 @@ class HomePage extends StatelessWidget {
                       ]),
                   SizedBox(height: 20),
                   HomeContent(
-                      title: "Penawaran Spesial",
-                      buttonText: "See More",
-                      onButtonPressed: () {},
+                      title: "Special Offer",
                       imageUrls: [
                         'https://c.ekstatic.net/ecl/sponsorships/sport-football/real-madrid-w300x300.jpg',
                         'https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2024/08/15/mbappe-trofijpg-20240815044747.jpg',
@@ -43,9 +39,7 @@ class HomePage extends StatelessWidget {
                       ]),
                   SizedBox(height: 20),
                   HomeContent(
-                      title: "Berita dan Artikel",
-                      buttonText: "See More",
-                      onButtonPressed: () {},
+                      title: "News and Article",
                       imageUrls: [
                         'https://c.ekstatic.net/ecl/sponsorships/sport-football/real-madrid-w300x300.jpg',
                         'https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2024/08/15/mbappe-trofijpg-20240815044747.jpg',

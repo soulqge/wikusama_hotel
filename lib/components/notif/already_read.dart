@@ -3,14 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../models/notications_models.dart';
 
-
 class AlreadyRead extends StatelessWidget {
   const AlreadyRead({super.key});
 
   @override
   Widget build(BuildContext context) {
     final notifications = [
-      {"title": "Hi Sapphire! We have recommendation for you!", "subtitle": "Check it out! "},
+      {
+        "title": "Hi Sapphire! We have recommendation for you!",
+        "subtitle": "Check it out! "
+      },
       {"title": "Hi Sapphire, welcome!", "subtitle": "Sign up successfully "},
     ];
 
@@ -19,9 +21,18 @@ class AlreadyRead extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Already Read",
-              style: GoogleFonts.openSans(
-                  fontSize: 12, fontWeight: FontWeight.w600)),
+          Row(
+            children: [
+              Text("Already",
+                  style: GoogleFonts.openSans(
+                    color: Color.fromRGBO(60, 94, 130, 1),
+                      fontSize: 12, fontWeight: FontWeight.w600)),
+              SizedBox(width: 2),
+              Text("Read",
+                  style: GoogleFonts.openSans(
+                      fontSize: 12, fontWeight: FontWeight.w600))
+            ],
+          ),
           SizedBox(height: 15),
           ListView.builder(
             shrinkWrap: true,

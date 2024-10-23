@@ -14,6 +14,7 @@ final List<Transaction> transactions = [
     checkOutDate: '16/10/24',
     totalKamar: '2',
     price: 300000,
+    qr: 'https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png'
   ),
   Transaction(
     roomType: 'Deluxe Room',
@@ -23,6 +24,7 @@ final List<Transaction> transactions = [
     checkOutDate: '12/10/24',
     totalKamar: '1',
     price: 500000,
+    qr: 'https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png'
   ),
 ];
 
@@ -66,7 +68,14 @@ class HistoryPage extends StatelessWidget {
                         },
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey[200],
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromRGBO(249, 252, 255, 1),
+                                Color.fromRGBO(230, 235, 240, 1)
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                            ),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Padding(
@@ -99,13 +108,18 @@ class HistoryPage extends StatelessWidget {
                                     Container(
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(12),
-                                        color: Colors.grey[300],
+                                        color: transaction.status == 'On Going'
+                                            ? Color.fromRGBO(73, 170, 109, 1)
+                                            : Colors.grey[300],
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(5.0),
                                         child: Text(
                                           transaction.status,
                                           style: GoogleFonts.openSans(
+                                            color: transaction.status == 'On Going'
+                                            ? Colors.white
+                                            : Colors.black,
                                             fontSize: 8,
                                             fontWeight: FontWeight.bold,
                                           ),

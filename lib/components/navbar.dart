@@ -39,19 +39,19 @@ class _BottomNavState extends State<BottomNav> {
       backgroundColor: Colors.white,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_outlined),
+          icon: Icon(Icons.home_outlined, color: Color.fromRGBO(157, 174, 192, 1),),
           label: 'Home'
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.calendar_month_outlined),
-          label: 'Jadwal'
+          icon: Icon(Icons.search, color: Color.fromRGBO(157, 174, 192, 1),),
+          label: 'Search'
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.receipt_outlined),
-          label: 'SPP'
+          icon: Icon(Icons.history, color: Color.fromRGBO(157, 174, 192, 1),),
+          label: 'History'
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle_outlined),
+          icon: Icon(Icons.account_circle_outlined, color: Color.fromRGBO(157, 174, 192, 1),),
           label: 'Profile'
         ),
       ],

@@ -48,8 +48,8 @@ class SignupPage extends StatelessWidget {
                       ),
                       SizedBox(height: 48),
                       ButtonWiku(
-                        bText: "Log In",
-                        route: '/home',
+                        bText: "Sign Up",
+                        route: '/login',
                         color: Colors.white,
                         gradient: LinearGradient(
                           colors: [

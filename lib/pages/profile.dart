@@ -16,23 +16,21 @@ class ProfilePage extends StatelessWidget {
             children: [
               Container(
                 height: 200,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                ),
+                decoration:
+                    BoxDecoration(color: Color.fromRGBO(44, 75, 108, 1)),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Profile Avatar
                       CircleAvatar(
                         radius: 40,
                         backgroundColor: Colors.grey,
                       ),
                       SizedBox(height: 10),
-                      // User Name
                       Text(
                         'Sapphire Neysa',
                         style: GoogleFonts.workSans(
+                          color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
@@ -41,7 +39,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),     
+              SizedBox(height: 20),
               ElevatedButton.icon(
                 onPressed: () {},
                 icon: Icon(Icons.edit, size: 16),
@@ -52,8 +50,9 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey[300],
-                  foregroundColor: Colors.black,
+                  side: BorderSide(color: Color.fromRGBO(44, 75, 108, 1)),
+                  backgroundColor: Colors.white,
+                  foregroundColor: Color.fromRGBO(44, 75, 108, 1),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -64,22 +63,29 @@ class ProfilePage extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 padding: EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
-                  color: Colors.grey[100],
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromRGBO(249, 252, 255, 1),
+                      Color.fromRGBO(230, 235, 240, 1)
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
                   children: [
-                    _buildSettingsTile('Change Password'),
+                    _buildSettingsTile('Change Password', Icons.lock_outline),
                     _buildDivider(),
-                    _buildSettingsTile('Language'),
+                    _buildSettingsTile('Language', Icons.language_outlined),
                     _buildDivider(),
-                    _buildSettingsTile('Help'),
+                    _buildSettingsTile('Help', Icons.help_center_rounded),
                     _buildDivider(),
-                    _buildSettingsTile('Privacy Center'),
+                    _buildSettingsTile('Privacy Center', Icons.privacy_tip_outlined),
                     _buildDivider(),
-                    _buildSettingsTile('Terms and Policies'),
+                    _buildSettingsTile('Terms and Policies', Icons.summarize_outlined),
                     _buildDivider(),
-                    _buildSettingsTile('About App'),
+                    _buildSettingsTile('About App', Icons.info_outline),
                   ],
                 ),
               ),
@@ -88,17 +94,25 @@ class ProfilePage extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 padding: EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
-                  color: Colors.grey[100],
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromRGBO(249, 252, 255, 1),
+                      Color.fromRGBO(230, 235, 240, 1)
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
                   children: [
-                    _buildSettingsTile('Log Out'),
+                    _buildSettingsTileL('Log Out', Color.fromRGBO(76, 152, 233, 1)),
                     _buildDivider(),
-                    _buildSettingsTile('Delete Account'),
+                    _buildSettingsTileL('Delete Account', Color.fromRGBO(207, 58, 65, 1)),
                   ],
                 ),
               ),
+              SizedBox(height: 30),
             ],
           ),
         ),
@@ -106,7 +120,7 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildSettingsTile(String title) {
+  Widget _buildSettingsTile(String title, IconData icon) {
     return ListTile(
       title: Text(
         title,
@@ -115,7 +129,21 @@ class ProfilePage extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
       ),
-      trailing: Icon(Icons.arrow_forward_ios, size: 16),
+      leading: Icon(icon, size: 16, color: Color.fromRGBO(44, 75, 108, 1),),
+      onTap: () {},
+    );
+  }
+
+  Widget _buildSettingsTileL(String title, Color color) {
+    return ListTile(
+      title: Text(
+        title,
+        style: GoogleFonts.workSans(
+          color: color,
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
       onTap: () {},
     );
   }

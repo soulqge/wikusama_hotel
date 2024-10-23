@@ -6,6 +6,7 @@ class Transaction {
   final String checkOutDate;
   final String totalKamar;
   final int price;
+  final String qr;
 
   Transaction({
     required this.roomType,
@@ -14,6 +15,7 @@ class Transaction {
     required this.checkInDate,
     required this.checkOutDate,
     required this.price,
-    required this.totalKamar
+    required this.totalKamar,
+    required this.qr
   });
 }

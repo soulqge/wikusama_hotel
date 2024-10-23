@@ -16,9 +16,9 @@ class DetailTransaksiPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              color: const Color.fromRGBO(44, 75, 108, 1),
+              color: Color.fromRGBO(44, 75, 108, 1),
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,9 +35,16 @@ class DetailTransaksiPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20),
               child: Container(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: Colors.grey[300],
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromRGBO(249, 252, 255, 1),
+                      Color.fromRGBO(230, 235, 240, 1)
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [],
                 ),
@@ -46,20 +53,20 @@ class DetailTransaksiPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        transaction.roomType,
+                        transaction.hotelName,
                         style: GoogleFonts.openSans(
-                          fontSize: 14,
+                          fontSize: 10,
                           fontWeight: FontWeight.w400,
                         ),
                       ),
                       Text(
-                        transaction.hotelName,
+                        transaction.roomType,
                         style: GoogleFonts.openSans(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -69,7 +76,7 @@ class DetailTransaksiPage extends StatelessWidget {
                               Text(
                                 'Check In',
                                 style: GoogleFonts.openSans(
-                                  fontSize: 12,
+                                  fontSize: 10,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -88,7 +95,7 @@ class DetailTransaksiPage extends StatelessWidget {
                               Text(
                                 'Check Out',
                                 style: GoogleFonts.openSans(
-                                  fontSize: 12,
+                                  fontSize: 10,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -103,43 +110,44 @@ class DetailTransaksiPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10),
-                      Text(
-                        'Total Room: ${transaction.totalKamar}',
-                        style: GoogleFonts.openSans(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                        ),
+                      SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Total Room:',
+                            style: GoogleFonts.openSans(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          Text(
+                            '${transaction.totalKamar} Room',
+                            style: GoogleFonts.openSans(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          )
+                        ],
                       ),
-                      const SizedBox(height: 10),
-                      Text(
-                        'Rp. ${transaction.price}',
-                        style: GoogleFonts.openSans(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      SizedBox(height: 20),
+                      Divider(
+                        color: Color.fromRGBO(44, 75, 108, 1),
+                        thickness: 1,
+                        height: 1,
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20),
                       // Add the QR Code Container
                       Center(
-                        child: Container(
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            color: Colors
-                                .grey[200], // Light grey for the QR container
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(color: Colors.grey, width: 1),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.network(
-                                'https://www.blibli.com/friends-backend/wp-content/uploads/2023/07/B700455-Cover-Rekomendasi-Hotel-di-Jakarta-Pusat-scaled.jpg', // QR Code Image URL (Replace with actual QR code)
-                                width: 150,
-                                height: 150,
-                                fit: BoxFit.cover,
-                              ),
-                            ],
-                          ),
+                        child: Column(
+                          children: [
+                            Image.network(
+                              transaction.qr,
+                              width: 245,
+                              height: 248,
+                              fit: BoxFit.cover,
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(height: 15),
@@ -147,12 +155,12 @@ class DetailTransaksiPage extends StatelessWidget {
                         alignment: Alignment.bottomRight,
                         child: Container(
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
                                 'Total Price',
                                 style: GoogleFonts.openSans(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),

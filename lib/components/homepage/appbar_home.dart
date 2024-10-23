@@ -29,7 +29,7 @@ class AppbarHome extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/notif');
               },
-              icon: Icon(Icons.notifications))
+              icon: Icon(Icons.notifications_outlined, color: Color.fromRGBO(44, 75, 108, 1),))
         ],
       ),
     );

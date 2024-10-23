@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wikusama_hotel/components/detail_kamar/room_desc.dart';
 import 'package:wikusama_hotel/components/detail_kamar/room_facilities.dart';
 import 'package:wikusama_hotel/components/detail_kamar/stackImage.dart';
 
@@ -31,17 +32,7 @@ class DetailKamarPage extends StatelessWidget {
                             fontSize: 24, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 28),
-                      Text(
-                        "Description",
-                        style: GoogleFonts.workSans(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: 15),
-                      Text(
-                          "Lorem ipsum dolor sit amet consectetur. Eget fringilla sit auctor egestas semper lorem eu senectus pellentesque. Pellentesque semper quis consequat viverra morbi neque. Tincidunt quam amet luctus tincidunt vitae proin. Magna fermentum imperdiet fringilla lorem.",
-                          style: GoogleFonts.openSans(
-                            fontSize: 14,
-                          )),
+                      RoomDesc(),
                       SizedBox(height: 28),
                       RoomFacilities(),
                     ],
@@ -63,7 +54,8 @@ class DetailKamarPage extends StatelessWidget {
                   padding: EdgeInsets.all(20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center, // Aligns the button and column vertically
+                    crossAxisAlignment: CrossAxisAlignment
+                        .center, // Aligns the button and column vertically
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +65,9 @@ class DetailKamarPage extends StatelessWidget {
                             style: GoogleFonts.openSans(
                                 fontSize: 14, fontWeight: FontWeight.w600),
                           ),
-                          SizedBox(height: 5), // Add some spacing if needed between the texts
+                          SizedBox(
+                              height:
+                                  5), // Add some spacing if needed between the texts
                           Text("Rp. 150.000",
                               style: GoogleFonts.openSans(
                                   fontSize: 24, fontWeight: FontWeight.w600)),
@@ -81,11 +75,33 @@ class DetailKamarPage extends StatelessWidget {
                       ),
                       Expanded(child: Container()),
                       Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color.fromRGBO(125, 162, 202, 1),
+                              Color.fromRGBO(44, 75, 108, 1)
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                          ),
+                          borderRadius: BorderRadius.circular(32),
+                        ),
                         child: ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Book Now",
-                                style: GoogleFonts.openSans(
-                                    fontSize: 16, fontWeight: FontWeight.w600))),
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.transparent,
+                            shadowColor: Colors.transparent,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 40, vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(32),
+                            ),
+                          ),
+                          child: Text(
+                            "Book Now",
+                            style: TextStyle(color: Colors.white), // Text color
+                          ),
+                        ),
                       ),
                     ],
                   ),

@@ -13,8 +13,10 @@ class RoomFacilities extends StatelessWidget {
         children: [
           Text(
             "Facilities",
-            style:
-                GoogleFonts.workSans(fontSize: 16, fontWeight: FontWeight.bold),
+            style: GoogleFonts.workSans(
+                color: Color.fromRGBO(44, 75, 108, 1),
+                fontSize: 16,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 15),
           Row(

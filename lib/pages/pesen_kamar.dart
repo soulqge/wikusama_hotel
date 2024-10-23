@@ -99,15 +99,18 @@ class _PesenKamarPageState extends State<PesenKamarPage> {
                         ),
                         SizedBox(height: 24),
                         ButtonWiku(
-                          bText: 'Search Room',
-                          route: '/detail_kamar',
-                          color: Colors.white,
-                          gradient: LinearGradient(
-                            colors: [Colors.blue, Colors.purple],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                        )
+                        bText: "Search Room",
+                        route: '/detail_kamar',
+                        color: Colors.white,
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromRGBO(125, 162, 202, 1),
+                            Color.fromRGBO(44, 75, 108, 1)
+                          ], // Lighter to darker blue
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                        ),
+                      ),
                       ],
                     ),
                   ),
@@ -134,7 +137,7 @@ class _PesenKamarPageState extends State<PesenKamarPage> {
         ),
         prefixIcon: const Icon(
           Icons.calendar_today,
-          color: Color.fromRGBO(187, 186, 186, 1),
+          color: Color.fromRGBO(44, 75, 108, 1),
         ),
         border: OutlineInputBorder(
           borderSide: BorderSide(),
@@ -158,6 +161,7 @@ class _PesenKamarPageState extends State<PesenKamarPage> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           decoration: BoxDecoration(
+            color: Colors.white,
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(12),
           ),
@@ -182,6 +186,7 @@ class _PesenKamarPageState extends State<PesenKamarPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Colors.white,
           title: const Text("Select Option"),
           content: SingleChildScrollView(
             child: Column(
