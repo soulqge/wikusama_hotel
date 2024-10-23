@@ -83,6 +83,22 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 30),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(vertical: 10),
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  children: [
+                    _buildSettingsTile('Log Out'),
+                    _buildDivider(),
+                    _buildSettingsTile('Delete Account'),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

@@ -102,19 +102,18 @@ class _PesenKamarPageState extends State<PesenKamarPage> {
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: () {
-                                print("Selected Price: $selectedPrice");
-                                print("Selected Room: $selectedRoom");
+                                Navigator.pushNamed(context, '/detail_kamar');
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.grey[300],
                                 foregroundColor: Colors.black,
-                                padding: const EdgeInsets.symmetric(
+                                padding: EdgeInsets.symmetric(
                                     horizontal: 40, vertical: 16),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(32),
                                 ),
                               ),
-                              child: const Text("Search Room"),
+                              child: Text("Search Room"),
                             ),
                           ),
                         ),

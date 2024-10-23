@@ -25,7 +25,11 @@ class AppbarHome extends StatelessWidget {
             ],
           ),
           Expanded(child: Container()),
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/notif');
+              },
+              icon: Icon(Icons.notifications))
         ],
       ),
     );
