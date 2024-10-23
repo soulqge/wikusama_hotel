@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wikusama_hotel/components/button_wiku.dart';
 import 'package:wikusama_hotel/components/navbar.dart';
 import 'package:wikusama_hotel/components/pesan_kamar/top_selected.dart';
 
@@ -97,26 +98,16 @@ class _PesenKamarPageState extends State<PesenKamarPage> {
                           ],
                         ),
                         SizedBox(height: 24),
-                        Center(
-                          child: Container(
-                            width: double.infinity,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/detail_kamar');
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.grey[300],
-                                foregroundColor: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 40, vertical: 16),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(32),
-                                ),
-                              ),
-                              child: Text("Search Room"),
-                            ),
+                        ButtonWiku(
+                          bText: 'Search Room',
+                          route: '/detail_kamar',
+                          color: Colors.white,
+                          gradient: LinearGradient(
+                            colors: [Colors.blue, Colors.purple],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
