@@ -10,10 +10,10 @@ class AlreadyRead extends StatelessWidget {
   Widget build(BuildContext context) {
     final notifications = [
       {
-        "title": "Hi Sapphire! We have recommendation for you!",
+        "title": "Hi ZamZam! We have recommendation for you!",
         "subtitle": "Check it out! "
       },
-      {"title": "Hi Sapphire, welcome!", "subtitle": "Sign up successfully "},
+      {"title": "Hi ZamZam, welcome!", "subtitle": "Sign up successfully "},
     ];
 
     return Padding(

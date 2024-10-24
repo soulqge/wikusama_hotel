@@ -14,12 +14,12 @@ class AppbarHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Hi, Sapphire!",
+                "Hi, ZamZam!",
                 style: GoogleFonts.workSans(
                     fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Text(
-                "Lorem ipsum dolor sit amet.",
+                "Hope You Have a Nice Day",
                 style: GoogleFonts.workSans(fontSize: 12),
               ),
             ],

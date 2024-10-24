@@ -28,7 +28,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Sapphire Neysa',
+                        'ZamZam',
                         style: GoogleFonts.workSans(
                           color: Colors.white,
                           fontSize: 18,

@@ -3,13 +3,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wikusama_hotel/components/homepage/home_carousel.dart';
 
 class HomeContent extends StatelessWidget {
-  final String title; // Title of the section
-  final List<String> imageUrls; // List of image URLs
+  final String title; 
+  final List<String> imageUrls; 
+  final List<String> captions;  
 
   const HomeContent({
     super.key,
     required this.title,
     required this.imageUrls,
+    required this.captions, 
   });
 
   @override
@@ -29,7 +31,10 @@ class HomeContent extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 20),
-        HomeCarousel(imageUrls: imageUrls),
+        HomeCarousel(
+          imageUrls: imageUrls,
+          captions: captions, 
+        ),
       ],
     );
   }

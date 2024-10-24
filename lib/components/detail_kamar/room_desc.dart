@@ -19,7 +19,7 @@ class RoomDesc extends StatelessWidget {
           ),
           SizedBox(height: 15),
           Text(
-              "Lorem ipsum dolor sit amet consectetur. Eget fringilla sit auctor egestas semper lorem eu senectus pellentesque. Pellentesque semper quis consequat viverra morbi neque. Tincidunt quam amet luctus tincidunt vitae proin. Magna fermentum imperdiet fringilla lorem.",
+              "Terletak di Malang, 13 menit jalan kaki dari Zoologi Frater Vianney Museum, RedDoorz at Villa Puncak Tidar menawarkan akomodasi dengan taman, parkir pribadi gratis, lounge bersama, dan teras. Akomodasi ini berjarak sekitar 2,8 km dari Taman Wisata Lembah Dieng, 4,2 km dari Pusat Kuliner Pulosari, dan 4,4 km dari Malang Library. Akomodasi ini menyediakan layanan kamar dan WiFi gratis di seluruh area akomodasi. Universitas Brawijaya Malang berjarak 4,7 km dari hotel, sementara Museum Brawijaya terletak sejauh 5 km.",
               style: GoogleFonts.openSans(
                 fontSize: 14,
               )),
